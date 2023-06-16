@@ -3,16 +3,19 @@
 /**
  * main - Entry point
  *
- * Description: A C program that prints a quote
+ * Description: print a quote using write func
+ *	ssize_t write(int fd, const void buffer, size_t count)
  *
- * Return is 1
+ * Return: 1 (error).
  *
  */
 
 int main(void)
 {
-	char quote[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	write(1, quote, 59);
+	char quot[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(1, quot, 51);
+
 	return (1);
 }
 
