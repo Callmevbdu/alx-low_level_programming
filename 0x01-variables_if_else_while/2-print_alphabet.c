@@ -14,9 +14,10 @@ int main(void)
 
 	while (ch <= 122)
 	{
-		putchar(ch"\n");
+		putchar(ch);
 		ch++;
 	}
+	putchar('\n);
 
 	return (0);
 }
