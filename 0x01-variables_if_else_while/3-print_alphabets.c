@@ -20,5 +20,6 @@ int main(void)
 		ch1++;
 		ch2++;
 	}
-	putchar('\n')
+	putchar('$');
+	putchar('\n');
 }
