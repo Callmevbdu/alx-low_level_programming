@@ -17,6 +17,7 @@ int main(void)
 	{
 		dig2 = 0;
 		while (dig2 <= 9)
+		{
 			if (dig1 != dig2 && dig1 < dig2)
 			{
 				putchar(dig1 + 48);
