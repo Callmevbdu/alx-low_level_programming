@@ -14,7 +14,7 @@ int main(void)
 
 	while (ch <= 122)
 	{
-		putchar(ch);
+		putchar(ch"\n");
 		ch++;
 	}
 
