@@ -13,10 +13,16 @@ int main(void)
 	char ch1 = 97;
 	char ch2 = 65;
 
-	while (ch1 <= 122 && ch2 <= 90)
+	/*print a-z*/
+	while (ch1 <= 122)
 	{
 		putchar(ch1);
 		ch1++;
+	}
+
+	/*print A-Z*/
+	while (ch2 <= 90)
+	{
 		putchar(ch2);
 		ch2++;
 	}
