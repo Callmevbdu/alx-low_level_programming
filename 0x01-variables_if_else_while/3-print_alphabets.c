@@ -16,10 +16,11 @@ int main(void)
 	while (ch1 <= 122 && ch2 <= 90)
 	{
 		putchar(ch1);
-		putchar(ch2);
 		ch1++;
+		putchar(ch2);
 		ch2++;
 	}
+
 	putchar('$');
 	putchar('\n');
 }
