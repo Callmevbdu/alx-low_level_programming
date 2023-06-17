@@ -27,6 +27,6 @@ int main(void)
 		ch2++;
 	}
 
-	putchar('$');
+	putchar(36);
 	putchar('\n');
 }
