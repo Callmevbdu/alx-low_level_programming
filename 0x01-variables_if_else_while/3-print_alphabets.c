@@ -29,4 +29,6 @@ int main(void)
 
 	putchar(36);
 	putchar('\n');
+
+	return (0);
 }
