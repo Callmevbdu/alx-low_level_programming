@@ -10,11 +10,11 @@
 
 int main(void)
 {
-	char ch = '97';
+	char ch = 97;
 
-	while (ch <= '122')
+	while (ch <= 122)
 	{
-		if (ch == '101' || ch == '113')
+		if (ch == 101 || ch == 113)
 			ch++;
 		putchar(ch);
 		ch++;
