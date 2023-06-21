@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - entry point
+ * print_alphabet - a prototype that uses "_putchar" function
  * Description: A C program that prints the alphabet in lower case
  * using a prototype.
  * Return: 0 (success)
