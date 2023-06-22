@@ -9,9 +9,5 @@
 
 int mul(int a, int b)
 {
-	/* sum: the total of the multiplication*/
-	int sum;
-
-	sum = (a * b)
-	return (sum);
+	return (a * b);
 }
