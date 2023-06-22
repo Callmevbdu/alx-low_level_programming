@@ -6,9 +6,11 @@
 
 void print_numbers(void)
 {
-	int ch;
+	int ch = 0;
 
-	for (ch = 48; ch <= 57; ch++)
-		_putchar(ch);
+	do {
+		_putchar(ch + 48);
+		num++;
+	} while (num >= 0 && num <= 9);
 	_puthcar('\n');
 }
