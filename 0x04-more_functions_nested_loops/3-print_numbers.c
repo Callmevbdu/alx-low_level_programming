@@ -10,7 +10,7 @@ void print_numbers(void)
 
 	do {
 		_putchar(ch + 48);
-		num++;
-	} while (num >= 0 && num <= 9);
+		ch++;
+	} while (ch >= 0 && ch <= 9);
 	_puthcar('\n');
 }
