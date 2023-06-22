@@ -9,9 +9,9 @@ void more_numbers(void)
 {
 	int line, ch;
 
-	for (line = 0; line <= 9; line++)
+	for (line = 0; line <= 10; line++)
 	{
-		for (ch = '0'; ch <= '14'; ch++)
+		for (ch = 0; ch <= 14; ch++)
 			_putchar(ch);
 			_putchar('\n');
 	}
