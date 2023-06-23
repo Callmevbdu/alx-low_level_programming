@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal - a function that print a diagonal using the "\\" character
+ * print_diagonal - a function that print a diagonal using the \ character
  * @n: input integer which define the space after printing
 */
 
