@@ -9,7 +9,7 @@ void print_square(int size)
 {
 	int length, width;
 
-	if (size = 1)
+	if size = 1
 		_putchar(35);
 	else
 		for (length = 2; length <= size; length++)
