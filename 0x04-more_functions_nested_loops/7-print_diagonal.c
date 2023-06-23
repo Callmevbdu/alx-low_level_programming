@@ -10,14 +10,19 @@ void print_diagonal(int n)
 	int position, space;
 
 	if (n <= 0)
-		_putchar('\n');
-	else
 	{
-		for (position = 1; position <= n; position++)
+		_putchar('\n');
+	} else
+	{
+		for (position = 0; position < n; position++)
 		{
-			for (space = 1; space <= position; space++)
-				_putchar(' ');
-			_putchar(92);
+			for (space = 0; space < n; space++)
+			{
+				if (position == space)
+					_putchar('\\');
+				else if (space < position)
+					_putchar(' ');
+			}
 			_putchar('\n');
 		}
 	}
