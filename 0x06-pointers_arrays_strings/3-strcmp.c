@@ -7,7 +7,7 @@
  * Return: 1 if the chars are the same, 0 otherwise.
 */
 
-char _strcmp(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int eq = 0;
 
