@@ -7,7 +7,7 @@
  * Return: 1 if the chars are the same, 0 otherwise.
 */
 
-char *_strcmp(char *s1, char *s2)
+char _strcmp(char *s1, char *s2)
 {
 	int eq = 0;
 
@@ -15,7 +15,7 @@ char *_strcmp(char *s1, char *s2)
 	{
 		if (*s1 != *s2)
 		{
-			eq = ((int)*s1 - 48) - ((int)*s2 - 48);
+			eq = ((int) *s1 - 48) - ((int) *s2 - 48);
 			break;
 		}
 		s1++;
