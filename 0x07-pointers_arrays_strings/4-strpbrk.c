@@ -9,11 +9,13 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int str = 0, btr = 0;
+	int str, btr;
 	char *ptr;
 
+	str = 0;
 	while (s[str] != '\0')
 	{
+		btr = 0;
 		while (accept[btr] != '\0')
 		{
 			if (accept[btr] == s[str])
