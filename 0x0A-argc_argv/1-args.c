@@ -1,5 +1,3 @@
-1-args.c
-
 #include <stdio.h>
 #include "main.h"
 
