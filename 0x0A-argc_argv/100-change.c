@@ -11,29 +11,29 @@
 
 int main(int argc, char *argv[])
 {
-	if (argc == 2)
-	{
-	int i, lm = 0, m = atoi(argv[1]);
+	int n, j, r;
 	int c[] = {25, 10, 5, 2, 1};
 
-	for (i = 0; i < 5; i++)
+	if (argc != 2)
 	{
-		if (m >= c[i])
-		{
-			lm += m / c[i];
-			m = m % c[i];
-			if (m % c[i] == 0)
-			{
-				break;
-			}
-		}
-	}
-	printf("%d\n", lm);
-	}
-	else
-	{
-		printf("Err\n");
+		printf("Error\n");
 		return (1);
 	}
+	n = atoi(argv[1]);
+	r = 0;
+	if (n < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+	for (j = 0; j < 5 && n >= 0; j++)
+	{
+		while (n >= c[j])
+		{
+			r++;
+			n -= c[j];
+		}
+	}
+	printf("%d\n", r);
 	return (0);
 }
