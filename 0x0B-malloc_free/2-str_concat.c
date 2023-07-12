@@ -45,7 +45,7 @@ char *str_concat(char *s1, char *s2)
 		if (i < sz1)
 			m[i] = s1[i];
 		else
-			m[i] = s2[i - sz];
+			m[i] = s2[i - sz1];
 	}
 	m[i] = '\0';
 	return (m);
