@@ -5,10 +5,11 @@
 
 /**
  * struct dog - a struct containing infos of a dog
- * @name: dog name
- * @age: dog age
- * @owner: dog owner
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
 */
+
 struct dog
 {
 	char *name;
