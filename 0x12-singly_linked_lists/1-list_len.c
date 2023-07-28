@@ -1,19 +1,29 @@
 #include "lists.h"
 
 /**
- * list_len - function that returns the number of elements
- * @h: pointer
+ * add_note - function that adds a new node at the beginning of a list_t list
+ * @head: pointer address
+ * @str: string
  * Return: size of the list
 */
 
-size_t list_len(const list_t *h)
+list_t *add_node(list_t **head, const char *str);
 {
-	size_t i = 0;
+	list_t *new_head = malloc(sizeof(list_t));
 
-	while (h)
+	if (!head || !new_head)
+		return (NULL);
+	if (str)
 	{
-		h = h->next;
-		i++;
+		new_head->str = strdup(str);
+		if (!new_head->str)
+		{
+			free(new_head);
+			return (NULL);
+		}
+		new_head->len = _strlen(new_head->str);
 	}
-	return (i);
+	new_head->next = *head;
+	*head = new_head;
+	return (new_head);
 }
