@@ -1,52 +1,48 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - A function that adds/update an element in a hash table.
- * @ht: hash table pointer.
- * @key: The key to add.
- * @value: The value with key.
- * Return: Failure (0), otherwise (-1).
+ * hash_table_set - Add or update an element in a hash table.
+ * @ht: A pointer to the hash table.
+ * @key: The key to add - cannot be an empty string.
+ * @value: The value associated with key.
+ * Return: Upon failure - 0.
+ *         Otherwise - 1.
  */
-
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *next;
-	char *valueCopy;
-	unsigned long int idx, jdx;
+	hash_node_t *new;
+	char *value_copy;
+	unsigned long int index, i;
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-
-	valueCopy = strdup(value);
-	if (valueCopy == NULL)
+	value_copy = strdup(value);
+	if (value_copy == NULL)
 		return (0);
-
-	idx = key_index((const unsigned char *)key, ht->size);
-	for (jdx = idx; ht->array[jdx]; jdx++)
+	index = key_index((const unsigned char *)key, ht->size);
+	for (i = index; ht->array[i]; i++)
 	{
-		if (strcmp(ht->array[jdx]->key, key) == 0)
+		if (strcmp(ht->array[i]->key, key) == 0)
 		{
-			free(ht->array[jdx]->value);
-			ht->array[jdx]->value = valueCopy;
+			free(ht->array[i]->value);
+			ht->array[i]->value = value_copy;
 			return (1);
 		}
 	}
-
-	next = malloc(sizeof(hash_node_t));
-	if (next == NULL)
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
 	{
-		free(valueCopy);
+		free(value_copy);
 		return (0);
 	}
-	next->key = strdup(key);
-	if (next->key == NULL)
+	new->key = strdup(key);
+	if (new->key == NULL)
 	{
-		free(next);
+		free(new);
 		return (0);
 	}
-	next->value = valueCopy;
-	next->next = ht->array[idx];
-	ht->array[idx] = next;
-
+	new->value = value_copy;
+	new->next = ht->array[index];
+	ht->array[index] = new;
 	return (1);
 }
