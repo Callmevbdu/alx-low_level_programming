@@ -19,6 +19,11 @@ int main(void)
 	printf("Found %d at index: %d\n\n", -1, linear_search(array, size, -1));
 	printf("Found %d at index: %d\n\n", 99, linear_search(array, size, 99));
 
+	/* Test cases for binary search */
+	printf("Found %d at index: %d\n\n", 8, binary_search(array, size, 8));
+	printf("Found %d at index: %d\n\n", 100, binary_search(array, size, 100));
+	printf("Found %d at index: %d\n\n", 42, binary_search(array, size, 42));
+
 	return (EXIT_SUCCESS);
 }
 
