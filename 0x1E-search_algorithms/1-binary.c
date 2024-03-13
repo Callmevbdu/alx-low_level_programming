@@ -39,6 +39,6 @@ int binary_search(int *array, size_t size, int value)
 			low = i + 1;
 		}
 	}
-
 	return (-1);  /* Error */
 }
+
